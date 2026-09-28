@@ -2256,3 +2256,6 @@ html {
   font-weight: 400;
   opacity: .75;
 }
+.button-code {
+  gap: 10px;
+}
