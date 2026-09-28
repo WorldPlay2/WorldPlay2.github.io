@@ -2242,3 +2242,17 @@ html {
 .film-external:hover {
   color: #26382b;
 }
+/* Placeholder link: visible but not clickable until the code is released. */
+.button-soon {
+  gap: 10px;
+  cursor: default;
+  opacity: .78;
+}
+.button-soon:hover {
+  transform: none;
+  background: rgba(20,32,28,.28);
+}
+.button-note {
+  font-weight: 400;
+  opacity: .75;
+}
