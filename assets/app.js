@@ -121,19 +121,14 @@
       if (filmVideo.tagName === 'VIDEO') filmVideo.play().catch(() => {});
       return;
     }
-    // YouTube rejects embeds that carry no HTTP Referer (error 153), which is
-    // always the case for pages opened from disk via file://. There, open the
-    // video on YouTube in a new tab instead.
-    const canEmbed = /^https?:$/.test(location.protocol);
-    if (overview.youtube && !canEmbed) {
-      window.open(`https://youtu.be/${encodeURIComponent(overview.youtube)}`, '_blank', 'noopener');
-      return;
-    }
+    // Always play inline. Note: YouTube refuses embeds without an HTTP Referer
+    // (error 153), so a page opened from disk via file:// cannot play it; the
+    // deployed https page (or a local http server) plays normally.
     if (overview.youtube) {
-      const params = new URLSearchParams({ autoplay: '1', rel: '0', modestbranding: '1', playsinline: '1', enablejsapi: '1' });
-      if (location.origin.startsWith('http')) params.set('origin', location.origin);
+      // Same plain embed parameters as other project pages (no JS API / origin).
+      const params = new URLSearchParams({ autoplay: '1', mute: '0', playsinline: '1', controls: '1', rel: '0' });
       filmVideo = Object.assign(document.createElement('iframe'), {
-        src: `https://www.youtube-nocookie.com/embed/${encodeURIComponent(overview.youtube)}?${params}`,
+        src: `https://www.youtube.com/embed/${encodeURIComponent(overview.youtube)}?${params}`,
         title: 'Overview video',
         allow: 'autoplay; encrypted-media; fullscreen; picture-in-picture',
         allowFullscreen: true,

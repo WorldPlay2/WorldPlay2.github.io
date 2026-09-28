@@ -2233,3 +2233,12 @@ html {
   border: 0;
   background: #000;
 }
+.film-external {
+  color: #4b6236;
+  text-decoration: underline;
+  text-decoration-color: #c1cea9;
+  text-underline-offset: 3px;
+}
+.film-external:hover {
+  color: #26382b;
+}
