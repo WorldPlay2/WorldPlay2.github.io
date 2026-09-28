@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f9f7" />
+    <meta name="description" content="WorldPlay2 generalizes across diverse scenes and subjects, with flexible control and long-horizon consistency. Explore results and comparisons." />
+    <meta property="og:title" content="WorldPlay2: Extending Real-Time Interactive World Models in Control and Horizon" />
+    <meta property="og:description" content="An interactive world model with flexible control and long-horizon consistency." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <title>WorldPlay2: Extending Real-Time Interactive World Models in Control and Horizon</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="assets/content.js"></script>
+    <script defer src="assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#long-horizon">Skip to results</a>
+<header class="site-header"><a class="wordmark" href="#top" aria-label="WorldPlay2 home">WorldPlay2</a>
+<nav class="main-nav" aria-label="Main navigation"><a href="#abstract" class="">Abstract</a><a href="#method" class="">Method</a><a href="#long-horizon" class="">Long-horizon consistency</a><a href="#flexible-control" class="">Flexible control</a><a href="#comparisons" class="">Comparisons</a>
+</nav><button class="mobile-menu icon-button" aria-expanded="false" aria-label="Open navigation"><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+</header>
+<main>
+<section class="hero" id="top" aria-label="Introducing WorldPlay2"><img class="hero-image is-visible" src="assets/posters/long-horizon/long1-0.webp" alt="A miniature garden">
+<div class="hero-shade">
+</div>
+<div class="hero-content">
+<div class="eyebrow hero-eyebrow"><span class="status-dot"></span> AN INTERACTIVE WORLD MODEL</div>
+<h1 class="paper-title"><span>WorldPlay2:</span> Extending Real-Time Interactive World Models in Control and Horizon</h1>
+<p class="hero-subtitle">Worlds that evolve with you.</p>
+<div class="hero-actions"><a class="button button-light button-play" href="#video" data-play-film><span class="button-play-icon"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m8 5 11 7-11 7Z" fill="currentColor" stroke-width="0"></path></svg></span>Watch the video</a><a class="button button-ghost" href="#long-horizon">Explore the results <svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"></path></svg></a>
+</div>
+</div>
+<div class="hero-bottom"><span class="hero-caption">Video Results · Long-Horizon Consistency &amp; Flexible Control</span>
+<button class="hero-playback" aria-label="Pause background video strips"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 5v14M16 5v14" stroke-width="3"></path></svg></button>
+</div><span class="hero-side-note">WORLDPLAY2 / EXPLORING POSSIBILITY</span>
+</section>
+<section class="intro section-shell" aria-labelledby="tldr-title">
+<div class="eyebrow" id="tldr-title"><span class="tiny-square"></span> TL;DR</div>
+<p><span class="tldr-line">WorldPlay2 generalizes across <span class="text-underline">scenes and characters</span>,</span> <span class="tldr-line">achieving <span class="text-underline">long-horizon consistency</span> alongside <span class="text-underline">flexible control</span>.</span></p>
+</section>
+<section class="film-section section-shell" id="video" aria-labelledby="film-title">
+<div class="film-topline">
+<div class="eyebrow" id="film-title"><span class="tiny-square"></span> OVERVIEW VIDEO</div>
+<span class="film-meta">1 min 58 s · sound on</span>
+</div>
+<div class="film-frame">
+<img class="film-poster" src="assets/posters/overview/demo-0.webp" alt="Overview video preview" width="1280" height="720">
+<button class="film-play" type="button" aria-label="Play the overview video"><span class="film-play-ring"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m8 5 11 7-11 7Z" fill="currentColor" stroke-width="0"></path></svg></span><span class="film-play-label">Watch the overview</span></button></div>
+</section>
+<section class="abstract-section section-shell" id="abstract" aria-labelledby="abstract-title">
+<div class="eyebrow" id="abstract-title"><span class="tiny-square"></span> ABSTRACT</div>
+<div class="abstract-body">
+<p>Interactive world models require responding in real time to versatile controls and maintaining long-horizon consistency. However, modeling heterogeneous controls remains difficult, while explosive contexts and unstable distillation impede achieving both long-horizon consistency and real-time responsiveness. In this paper, we present WorldPlay2, an interactive world model that couples a factorized hybrid control interface with a co-design of compressed memory and stable distillation. 1) Our factorized hybrid control interface integrates frame-aligned action control with structured semantic control that explicitly disentangles scene appearance, character identity, and dynamic semantic events, thereby facilitating effective control learning. 2) To achieve efficient long-horizon modeling, we compress historical contexts into compact memory tokens shared by the autoregressive student and the bidirectional teacher. This design enables clip-wise, memory-conditioned score evaluation instead of jointly processing an entire long rollout, substantially reducing distillation overhead. 3) We further propose Stable Forcing, which initializes the autoregressive student via a few-step strategy and leverages full-rollout replay to preserve the quality of long-horizon rollouts, ensuring robust and stable distillation. Extensive experiments demonstrate the strong generalizability of our model and its superior performance compared to existing methods.</p>
+</div>
+</section>
+<section class="method-section" id="method">
+<div class="section-shell">
+<div class="section-heading">
+<div class="eyebrow"><span class="tiny-square"></span> METHOD</div>
+<h2>Three pieces. <span>One real-time world.</span>
+</h2>
+<p>A factorized control interface to support flexible interactions, a compact memory for efficient long-horizon modeling and distillation, and a stable distillation framework for stable distillation.</p>
+</div>
+<figure class="method-figure">
+<a href="assets/figures/overview.webp" target="_blank" rel="noopener" aria-label="Open Figure 2 at full size"><img src="assets/figures/overview.webp" alt="Figure 2: overview of WorldPlay2 — factorized hybrid control feeds an autoregressive world model whose history is compressed into sink, compressed, and temporal memory tokens" width="1778" height="753" loading="lazy"></a>
+<figcaption><span>Figure 2</span>Factorized hybrid control splits the input into frame-aligned actions and structured semantic control; a history compressor turns past frames into compact memory tokens for efficient long-horizon inference.</figcaption>
+</figure>
+<div class="method-grid">
+<article class="method-card">
+<span class="method-index">01</span>
+<h3>Factorized hybrid control interface</h3>
+<p><strong>Frame-aligned action control.</strong> Continuous camera pitch and yaw, discrete longitudinal and lateral movements, the camera perspective, and a jump action are embedded into a unified action representation.</p>
+<p><strong>Structured semantic control.</strong> A structured caption partitions high-level signals into three decoupled fields: <em>scene</em> for environmental content, <em>character</em> for the identity and appearance of the controlled entity, and <em>event</em> for the current semantic change.</p>
+<div class="method-formula"><i>A<sub>t</sub></i> = {<i>a<sub>t</sub></i>, <i>d<sub>t</sub></i>}, &nbsp;<i>d<sub>t</sub></i> = (<i>d</i><sub>scene</sub>, <i>d</i><sub>character</sub>, <i>d</i><sub>event</sub>)</div>
+</article>
+<article class="method-card">
+<span class="method-index">02</span>
+<h3>Distillation-oriented compressed memory</h3>
+<p>A learnable history compressor encodes the history into compact memory tokens, consisting of sink tokens, compressed tokens, and adjacent temporal tokens.</p>
+<p>Compared with full-resolution contexts, the sequence length is reduced by approximately <strong><i>l</i>·<i>s</i><sup>2</sup> = 32×</strong> (<i>l</i> = 2 temporal and <i>s</i> = 4 spatial downsampling).</p>
+<div class="method-formula"><i>m</i><sub>&lt;<i>t</i></sub> = [<i>x</i><sub>sink</sub>; <i>C<sub>φ</sub></i>(<i>x</i><sub>&lt;<i>t</i></sub>, <i>x</i><sup>lr</sup><sub>&lt;<i>t</i></sub>); <i>x</i><sub>tmp</sub>]</div>
+</article>
+<article class="method-card">
+<span class="method-index">03</span>
+<h3>Stable Forcing</h3>
+<p><strong>Few-step initialization.</strong> The autoregressive student is warm-started by extending PDD to the memory-augmented model, so that its few-step rollout distribution remains close to the teacher distribution.</p>
+<p><strong>Full-rollout replay.</strong> Each chunk undergoes full few-step sampling during rollout, while a randomly selected intermediate step is cached and replayed with gradients.</p>
+<p><strong>Efficient score evaluation.</strong> The long rollout is partitioned into clips, and real and fake scores are computed per clip, conditioned on compact memory tokens.</p>
+<div class="method-formula"><i>s</i><sub>fake/real</sub> = <i>v</i>(<i>x</i><sup><i>σ</i></sup><sub>[<i>iL</i>:(<i>i</i>+1)<i>L</i>]</sub>, <i>σ</i>, <i>m</i><sub>&lt;<i>iL</i></sub>, <i>A</i><sub>≤(<i>i</i>+1)<i>L</i></sub>)</div>
+</article>
+</div>
+<figure class="method-figure">
+<a href="assets/figures/stable-forcing.webp" target="_blank" rel="noopener" aria-label="Open Figure 4 at full size"><img src="assets/figures/stable-forcing.webp" alt="Figure 4: Stable Forcing — full few-step rollout, memory-augmented bidirectional teachers for real and fake scores, and gradient replay of one cached step per chunk" width="1778" height="555" loading="lazy"></a>
+<figcaption><span>Figure 4</span>Stable Forcing combines few-step initialization, full-rollout replay, and efficient score evaluation for stable long-horizon distillation.</figcaption>
+</figure>
+</div>
+</section>
+<section class="consistency-section" id="long-horizon">
+<div class="section-shell">
+<div class="section-heading  ">
+<div class="eyebrow"><span class="section-number">01</span> LONG-HORIZON CONSISTENCY</div>
+<h2>Keep exploring. <span>The world remembers.</span>
+</h2>
+</div>
+<div class="demo-carousel" role="region" aria-roledescription="carousel" aria-label="Long-horizon exploration">
+<div class="carousel-topline">
+<h3>Long-horizon exploration</h3>
+<div class="carousel-navigation"><span class="slide-count">01 <span>/ 10</span></span><button class="round-button previous" aria-label="Previous Long-horizon exploration example"><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg></button><button class="round-button" aria-label="Next Long-horizon exploration example"><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg></button>
+</div>
+</div>
+<div class="carousel-viewport" tabindex="0" aria-label="Long-horizon exploration: use left and right arrow keys to change examples">
+<div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 10">
+<div class="frame-viewer ">
+<div class="media-stage"><video src="videos/long-horizon/long1.mp4" poster="assets/posters/long-horizon/long1-0.webp" controls="" playsinline="" preload="none" aria-label="A longer journey through a miniature world."></video><button class="media-expand" aria-label="Expand A longer journey through a miniature world."><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"></path></svg></button>
+</div>
+</div>
+<div class="demo-caption">
+<div class="demo-caption-text">
+<h4>A longer journey through a miniature world.</h4>
+<p>Guide a snail around a garden track, revisiting its colorful surroundings through turns and jumps.</p>
+</div>
+<dl class="demo-context">
+<div>
+<dt>SCENE</dt>
+<dd>A miniature garden</dd>
+</div>
+<div>
+<dt>Character</dt>
+<dd>A stylized snail</dd>
+</div>
+<div>
+<dt>Event</dt>
+<dd>Move + turn + jump</dd>
+</div>
+</dl>
+</div>
+</div>
+</div>
+<div class="carousel-bottom">
+<div class="carousel-dots" aria-label="Select Long-horizon exploration example"><button class="active" aria-label="Show A longer journey through a miniature world." aria-pressed="true"></button><button class="" aria-label="Show Return to a familiar storybook world." aria-pressed="false"></button><button class="" aria-label="Show Explore further. Find your way back." aria-pressed="false"></button><button class="" aria-label="Show Familiar streets, from different angles." aria-pressed="false"></button><button class="" aria-label="Show Keep the world in view." aria-pressed="false"></button><button class="" aria-label="Show Consistency in imagined worlds." aria-pressed="false"></button><button class="" aria-label="Show Explore a world beneath the surface." aria-pressed="false"></button>
+</div><span>Figure 1 <span class="source-dot">·</span> WorldPlay2</span>
+</div>
+<div class="sr-only" aria-live="polite">A longer journey through a miniature world., example 1 of 10</div>
+</div>
+</div>
+</section>
+<section class="capability-section section-shell" id="flexible-control">
+<div class="section-heading  ">
+<div class="eyebrow"><span class="section-number">02</span> FLEXIBLE CONTROL</div>
+<h2>Your world. <span>Your move.</span>
+</h2>
+</div>
+<div class="demo-carousel" role="region" aria-roledescription="carousel" aria-label="Interact with your world">
+<div class="carousel-topline">
+<h3>Interact with your world</h3>
+<div class="carousel-navigation"><span class="slide-count">01 <span>/ 07</span></span><button class="round-button previous" aria-label="Previous Interact with your world example"><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg></button><button class="round-button" aria-label="Next Interact with your world example"><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg></button>
+</div>
+</div>
+<div class="carousel-viewport" tabindex="0" aria-label="Interact with your world: use left and right arrow keys to change examples">
+<div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 7">
+<div class="frame-viewer ">
+<div class="media-stage"><video src="videos/interaction/interaction1.mp4" poster="assets/posters/interaction/interaction1-0.webp" controls="" playsinline="" preload="none" aria-label="Small actions. A world of change."></video><button class="media-expand" aria-label="Expand Small actions. A world of change."><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"></path></svg></button>
+</div>
+</div>
+<div class="demo-caption">
+<div class="demo-caption-text">
+<h4>Small actions. A world of change.</h4>
+<p>Navigate a sunlit kitchen, ignite the stove, and extinguish the flame through a sequence of semantic events.</p>
+</div>
+<dl class="demo-context">
+<div>
+<dt>SCENE</dt>
+<dd>A sunlit kitchen</dd>
+</div>
+<div>
+<dt>Character</dt>
+<dd>First-person Perspective</dd>
+</div>
+<div>
+<dt>Event</dt>
+<dd>Fire → extinguish</dd>
+</div>
+</dl>
+</div>
+</div>
+</div>
+<div class="carousel-bottom">
+<div class="carousel-dots" aria-label="Select Interact with your world example"><button class="active" aria-label="Show Small actions. A world of change." aria-pressed="true"></button><button class="" aria-label="Show Interact with a familiar companion." aria-pressed="false"></button><button class="" aria-label="Show From walking to riding." aria-pressed="false"></button><button class="" aria-label="Show Change the world along the way." aria-pressed="false"></button><button class="" aria-label="Show Reach into your world." aria-pressed="false"></button><button class="" aria-label="Show From walking to driving." aria-pressed="false"></button><button class="" aria-label="Show Discover what is inside." aria-pressed="false"></button>
+</div><span>Figure 1 <span class="source-dot">·</span> WorldPlay2</span>
+</div>
+<div class="sr-only" aria-live="polite">Small actions. A world of change., example 1 of 7</div>
+</div>
+</section>
+<section class="comparison-section section-shell" id="comparisons">
+<div class="section-heading  ">
+<div class="eyebrow"><span class="section-number">03</span> COMPARISONS</div>
+<h2>See the difference. <span>Side by side.</span>
+</h2>
+</div>
+<div class="comparison-selector"><span>COMPARE WITH</span>
+<div class="baseline-options" aria-label="Comparison baseline"><button class="selected" aria-pressed="true">WorldPlay</button><button class="" aria-pressed="false">AlayaWorld</button><button class="" aria-pressed="false">LingBot-World-V2</button><button class="" aria-pressed="false">EchoWM</button><button class="" aria-pressed="false">Alaya-Evoke-Turbo</button>
+</div>
+</div>
+<div class="pair-intro" aria-live="polite">
+<h3>Responding to semantic events</h3>
+<p>Cloud and balloon events in the same city scene. Compare how each model responds to the requested changes.</p>
+</div>
+<div class="pair-viewer">
+<div class="pair-grid">
+<div class="pair-column ">
+<div class="pair-label"><span>WorldPlay</span><span class="pair-tag">BASELINE</span>
+</div>
+<div class="media-stage"><video src="videos/comparison/worldplay.mp4" poster="assets/posters/comparison/worldplay-0.webp" playsinline="" preload="none" aria-label="WorldPlay: Responding to semantic events"></video><button class="media-expand" aria-label="Expand WorldPlay comparison"><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"></path></svg></button>
+</div>
+</div>
+<div class="pair-column ours">
+<div class="pair-label"><span><span class="status-dot"></span>WorldPlay2</span><span class="pair-tag">OURS</span>
+</div>
+<div class="media-stage"><video src="videos/comparison/ours_vs_worldplay.mp4" poster="assets/posters/comparison/ours_vs_worldplay-0.webp" playsinline="" preload="none" aria-label="WorldPlay2: Responding to semantic events"></video><button class="media-expand" aria-label="Expand WorldPlay2 comparison"><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"></path></svg></button>
+</div>
+</div>
+</div>
+<div class="pair-controls"><button class="round-button" aria-label="Play both videos"><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 11 7-11 7Z" fill="currentColor" stroke-width="0"></path></svg></button><span class="pair-control-label">SYNCHRONIZED PLAYBACK</span><input min="0" max="100" step="0.1" aria-label="Responding to semantic events comparison progress" type="range" value="0" style="--progress: 0%;"><span class="frame-count">0s / 13s</span>
+</div>
+<div class="pair-note"><span>Same scene · shared playback controls</span><span>Figure 5</span>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-bottom section-shell"><a class="wordmark" href="#top">WorldPlay2</a><span>Research project</span><a href="#top">Back to top <svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"></path></svg></a>
+</div>
+</footer>
+    
+  </body>
+</html>
